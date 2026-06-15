@@ -498,3 +498,33 @@ Make all 10 headlines different styles (question, statement, list, how-to, warni
 </div>
 
 <!-- MID AD SPA
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const cards = document.querySelectorAll(".card");
+  
+  // Real Prompts Data (Line wise updated)
+  const realPrompts = [
+    { title: "Advanced AI Coding Assistant", text: "Act as an expert software engineer and senior code auditor. Identify any syntax or logical bugs, rewrite the optimized version, and explain the fixes in a brief list." },
+    { title: "ATS-Optimized Resume Writer", text: "Act as an expert ATS resume writer. Rewrite my resume summary, experience bullet points, and skills section. Optimize it with high-frequency keywords for a 95+ compatibility score." },
+    { title: "1-Click SEO Blog Writer", text: "You are an expert SEO content strategist. Write a comprehensive 1500-word blog post on the given topic using proper Markdown, clear subheadings, and a bulleted key takeaways section." },
+    { title: "Pro YouTube Scriptwriter", text: "Act as a professional YouTube scriptwriter for viral channels. Write a highly engaging 8-minute video script including a 15-second hook and pacing changes every 45 seconds." },
+    { title: "Hyper-Realistic Portrait", text: "A hyper-realistic studio portrait of an elderly man, deep wrinkles, cinematic lighting, shot on 85mm lens, photorealistic, 8k resolution, highly detailed texture." },
+    { title: "Cyberpunk City Street", text: "Neon-drenched cyberpunk cityscape at night, flying cars, rainy streets with puddles reflecting purple and cyan lights, anime style, highly detailed, unreal engine render." },
+    { title: "3D Pixar Style Character", text: "Cute 3D animated baby dragon, Pixar style, big glossy eyes, vibrant colors, soft clay texture, isolated on a clean solid pastel background, studio lighting." },
+    { title: "Minimalist Logo Vector", text: "A minimalist flat vector logo design of a futuristic tech company, clean geometric lines, white background, modern aesthetic, high resolution, corporate branding masterclass." },
+    { title: "The 3-Second Scroll Stopper", text: "Create 5 viral hook ideas for an Instagram Reel about the given topic. Each hook must use psychological triggers to stop the user from scrolling within the first 3 seconds." },
+    { title: "Faceless Theme Page Script", text: "Write a 30-second motivational viral Reel script for a faceless theme page. Include deep atmospheric B-roll text descriptions in brackets and slow cinematic pacing." }
+  ];
+
+  cards.forEach((card, index) => {
+    if (realPrompts[index]) {
+      const titleEl = card.querySelector(".card-title");
+      const textEl = card.querySelector("[id^='p']");
+      if (titleEl) titleEl.innerText = realPrompts[index].title;
+      if (textEl) textEl.innerText = realPrompts[index].text;
+    }
+  });
+});
+</script>
+</body>
+</html>
