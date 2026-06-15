@@ -498,12 +498,9 @@ Make all 10 headlines different styles (question, statement, list, how-to, warni
 </div>
 
 <!-- MID AD SPA
-
-  <script>
+<script>
 document.addEventListener("DOMContentLoaded", function() {
-  const cards = document.querySelectorAll(".card");
-  
-  // Real Prompts Data (Line wise updated)
+  // Real Prompts Data
   const realPrompts = [
     { title: "Advanced AI Coding Assistant", text: "Act as an expert software engineer and senior code auditor. Identify any syntax or logical bugs, rewrite the optimized version, and explain the fixes in a brief list." },
     { title: "ATS-Optimized Resume Writer", text: "Act as an expert ATS resume writer. Rewrite my resume summary, experience bullet points, and skills section. Optimize it with high-frequency keywords for a 95+ compatibility score." },
@@ -517,10 +514,12 @@ document.addEventListener("DOMContentLoaded", function() {
     { title: "Faceless Theme Page Script", text: "Write a 30-second motivational viral Reel script for a faceless theme page. Include deep atmospheric B-roll text descriptions in brackets and slow cinematic pacing." }
   ];
 
+  // Direct target by class names
+  const cards = document.querySelectorAll(".card");
   cards.forEach((card, index) => {
     if (realPrompts[index]) {
       const titleEl = card.querySelector(".card-title");
-      const textEl = card.querySelector("[id^='p']");
+      const textEl = card.querySelector(".prompt-text");
       if (titleEl) titleEl.innerText = realPrompts[index].title;
       if (textEl) textEl.innerText = realPrompts[index].text;
     }
